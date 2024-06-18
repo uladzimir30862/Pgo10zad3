@@ -35,21 +35,16 @@ class Item {
 
 public class Main {
     public static void main(String[] args) {
-        // Tworzenie kolekcji ArrayList
         List<Item> items = new ArrayList<>();
 
-        // Dodawanie 10 obiektów klasy Item do kolekcji
         for (int i = 1; i <= 10; i++) {
             items.add(new Item(i, "Item " + i));
         }
 
-        // Wyłuskiwanie pięciu pierwszych elementów z listy za pomocą subList()
         List<Item> firstFiveItems = items.subList(0, 5);
 
-        // Tworzenie kontenera HashSet i umieszczanie w nim elementów z subList
         Set<Item> itemSet = new HashSet<>(firstFiveItems);
 
-        // Wyświetlanie elementów HashSet
         for (Item item : itemSet) {
             System.out.println(item);
         }
